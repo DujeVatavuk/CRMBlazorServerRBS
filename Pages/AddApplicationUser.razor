@@ -15,6 +15,30 @@
                         <RadzenRequiredValidator Component="Email" Text="Email is required" />
                     </Helper>
                 </RadzenFormField>
+<RadzenFormField Text="First Name" Variant="Variant.Filled">
+                    <ChildContent>
+                        <RadzenTextBox style="width: 100%" @bind-Value="@user.FirstName" Name="FirstName" />
+                    </ChildContent>
+                    <Helper>
+                        <RadzenRequiredValidator Component="FirstName" Text="First Name is required" />
+                    </Helper>
+                </RadzenFormField>
+<RadzenFormField Text="Last Name" Variant="Variant.Filled">
+                    <ChildContent>
+                        <RadzenTextBox style="width: 100%" @bind-Value="@user.LastName" Name="LastName" />
+                    </ChildContent>
+                    <Helper>
+                        <RadzenRequiredValidator Component="LastName" Text="Last Name is required" />
+                    </Helper>
+                </RadzenFormField>
+<RadzenFormField Text="" Variant="Variant.Filled">
+                    <ChildContent>
+                        <RadzenFileInput TValue="string" ChooseText="Picture" @bind-Value="@user.Picture" Name="Picture"></RadzenFileInput>
+                    </ChildContent>
+                    <Helper>
+                        <RadzenRequiredValidator Component="Picture" Text="Picture is required" />
+                    </Helper>
+                </RadzenFormField>
                 <RadzenFormField Text="Roles" Variant="Variant.Filled">
                     <ChildContent>
                         <RadzenDropDown Data="@roles" Multiple="true" style="width: 100%" TextProperty="Name" @bind-Value="@(userRoles)" ValueProperty="Id" Name="Roles" />

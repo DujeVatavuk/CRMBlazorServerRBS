@@ -19,15 +19,25 @@
             <RadzenDataGrid @ref="grid0" AllowFiltering="true" AllowPaging="true" ShowPagingSummary="true" PageSizeOptions=@(new int[]{5, 10, 20, 30}) AllowSorting="true" Data="@users"
                 TItem="CRMBlazorServerRBS.Models.ApplicationUser" RowSelect="@RowSelect">
                 <Columns>
-                    <RadzenDataGridColumn TItem="CRMBlazorServerRBS.Models.ApplicationUser" Property="UserName" Title="User Name" />
-                    <RadzenDataGridColumn TItem="CRMBlazorServerRBS.Models.ApplicationUser" Property="Email" Title="Email" />
-                    <RadzenDataGridColumn TItem="CRMBlazorServerRBS.Models.ApplicationUser" Filterable="false" Sortable="false" TextAlign="TextAlign.Center" Width="70px">
-                        <Template Context="user">
-                            <RadzenButton ButtonStyle="ButtonStyle.Danger" Icon="close" Size="ButtonSize.Small"
-                                Variant="Variant.Flat" Shade="Shade.Lighter" Click="@(() => DeleteClick(user))" @onclick:stopPropagation="true" />
+                    <RadzenDataGridColumn TItem="CRMBlazorServerRBS.Models.ApplicationUser" Title="Picture">
+                        <Template>
+                            <RadzenImage Style="width: 30px; height: 30px" Path="@context.Picture"></RadzenImage>
                         </Template>
                     </RadzenDataGridColumn>
+                    <RadzenDataGridColumn TItem="CRMBlazorServerRBS.Models.ApplicationUser" Property="UserName" Title="User Name" />
+                    <RadzenDataGridColumn TItem="CRMBlazorServerRBS.Models.ApplicationUser" Property="Email" Title="Email" />
+                    <RadzenDataGridColumn TItem="CRMBlazorServerRBS.Models.ApplicationUser" Title="First Name" Property="FirstName"></RadzenDataGridColumn>
+                    <RadzenDataGridColumn TItem="CRMBlazorServerRBS.Models.ApplicationUser" Title="Last Name" Property="LastName"></RadzenDataGridColumn>
+                    <RadzenDataGridColumn TItem="CRMBlazorServerRBS.Models.ApplicationUser" Filterable="false" Sortable="false" TextAlign="TextAlign.Center" Width="70px" Title="Delete">
+                                            <Template Context="user">
+                                                <RadzenButton ButtonStyle="ButtonStyle.Danger" Icon="close" Size="ButtonSize.Small"
+                                                    Variant="Variant.Flat" Shade="Shade.Lighter" Click="@(() => DeleteClick(user))" @onclick:stopPropagation="true" />
+                                            </Template>
+                                        </RadzenDataGridColumn>
                 </Columns>
+                <EmptyTemplate>
+                    <RadzenImage Style="width: 30px; height: 30px"></RadzenImage>
+                </EmptyTemplate>
             </RadzenDataGrid>
         </RadzenColumn>
     </RadzenRow>
