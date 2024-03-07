@@ -39,6 +39,9 @@ namespace CRMBlazorServerRBS.Pages
         protected bool errorVisible;
         protected CRMBlazorServerRBS.Models.RadzenCRM.OpportunityStatus opportunityStatus;
 
+        [Inject]
+        protected SecurityService Security { get; set; }
+
         protected async Task FormSubmit()
         {
             try

@@ -51,6 +51,9 @@ namespace CRMBlazorServerRBS.Pages
 
         protected IEnumerable<CRMBlazorServerRBS.Models.RadzenCRM.TaskStatus> taskStatusesForStatusId;
 
+        [Inject]
+        protected SecurityService Security { get; set; }
+
         protected async Task FormSubmit()
         {
             try

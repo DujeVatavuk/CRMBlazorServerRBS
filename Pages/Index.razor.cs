@@ -31,5 +31,8 @@ namespace CRMBlazorServerRBS.Pages
 
         [Inject]
         protected NotificationService NotificationService { get; set; }
+
+        [Inject]
+        protected SecurityService Security { get; set; }
     }
 }
