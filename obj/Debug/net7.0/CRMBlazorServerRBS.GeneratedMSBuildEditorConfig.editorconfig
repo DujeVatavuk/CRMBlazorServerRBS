@@ -1,0 +1,111 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CRMBlazorServerRBS
+build_property.RootNamespace = CRMBlazorServerRBS
+build_property.ProjectDir = C:\Projects\radzen\tutorials\CRMBlazorServerRBS\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Projects\radzen\tutorials\CRMBlazorServerRBS
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Projects/radzen/tutorials/CRMBlazorServerRBS/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/radzen/tutorials/CRMBlazorServerRBS/Pages/AddContact.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkQ29udGFjdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/radzen/tutorials/CRMBlazorServerRBS/Pages/AddOpportunity.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkT3Bwb3J0dW5pdHkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/radzen/tutorials/CRMBlazorServerRBS/Pages/AddOpportunityStatus.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkT3Bwb3J0dW5pdHlTdGF0dXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/radzen/tutorials/CRMBlazorServerRBS/Pages/AddTask.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkVGFzay5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/radzen/tutorials/CRMBlazorServerRBS/Pages/AddTaskStatus.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkVGFza1N0YXR1cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/radzen/tutorials/CRMBlazorServerRBS/Pages/AddTaskType.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkVGFza1R5cGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/radzen/tutorials/CRMBlazorServerRBS/Pages/Contacts.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/radzen/tutorials/CRMBlazorServerRBS/Pages/EditContact.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdENvbnRhY3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/radzen/tutorials/CRMBlazorServerRBS/Pages/EditOpportunity.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdE9wcG9ydHVuaXR5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/radzen/tutorials/CRMBlazorServerRBS/Pages/EditOpportunityStatus.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdE9wcG9ydHVuaXR5U3RhdHVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/radzen/tutorials/CRMBlazorServerRBS/Pages/EditTask.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdFRhc2sucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/radzen/tutorials/CRMBlazorServerRBS/Pages/EditTaskStatus.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdFRhc2tTdGF0dXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/radzen/tutorials/CRMBlazorServerRBS/Pages/EditTaskType.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdFRhc2tUeXBlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/radzen/tutorials/CRMBlazorServerRBS/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/radzen/tutorials/CRMBlazorServerRBS/Pages/Opportunities.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3Bwb3J0dW5pdGllcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/radzen/tutorials/CRMBlazorServerRBS/Pages/OpportunityStatuses.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3Bwb3J0dW5pdHlTdGF0dXNlcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/radzen/tutorials/CRMBlazorServerRBS/Pages/Tasks.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFza3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/radzen/tutorials/CRMBlazorServerRBS/Pages/TaskStatuses.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFza1N0YXR1c2VzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/radzen/tutorials/CRMBlazorServerRBS/Pages/TaskTypes.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFza1R5cGVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/radzen/tutorials/CRMBlazorServerRBS/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/radzen/tutorials/CRMBlazorServerRBS/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/radzen/tutorials/CRMBlazorServerRBS/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
