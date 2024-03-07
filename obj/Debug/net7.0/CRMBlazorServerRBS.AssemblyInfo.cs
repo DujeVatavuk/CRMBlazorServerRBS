@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CRMBlazorServerRBS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a602ab11b3277940f759bf49d808ae50330395f2")]
 [assembly: System.Reflection.AssemblyProductAttribute("CRMBlazorServerRBS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CRMBlazorServerRBS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
