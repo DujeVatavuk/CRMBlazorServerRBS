@@ -54,6 +54,8 @@ namespace CRMBlazorServerRBS.Pages
         {
             try
             {
+                opportunity.UserId = Security.User?.Id;
+                
                 await RadzenCRMService.CreateOpportunity(opportunity);
                 DialogService.Close(opportunity);
             }

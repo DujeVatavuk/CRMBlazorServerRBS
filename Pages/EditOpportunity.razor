@@ -1,4 +1,5 @@
-@page "/edit-opportunity"
+@page "/edit-opportunity"
+
 @attribute [Authorize]
 
 <PageTitle>Edit Opportunity</PageTitle>
@@ -21,14 +22,6 @@
                   </ChildContent>    
                   <Helper>
                     <RadzenRequiredValidator Component="Name" Text="Name is required" />
-                  </Helper>
-            </RadzenFormField>
-            <RadzenFormField Text="User Id" Variant="Variant.Filled">
-                  <ChildContent>
-                    <RadzenTextBox style="display: block; width: 100%" @bind-Value="@opportunity.UserId" Name="UserId" />
-                  </ChildContent>    
-                  <Helper>
-                    <RadzenRequiredValidator Component="UserId" Text="UserId is required" />
                   </Helper>
             </RadzenFormField>
             <RadzenFormField Text="Contact" Variant="Variant.Filled">
