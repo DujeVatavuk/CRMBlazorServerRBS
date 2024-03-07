@@ -1,0 +1,29 @@
+# Ignore Visual Studio files
+.vs/
+
+# Ignore build output
+/bin/
+/obj/
+
+# Ignore NuGet packages
+/packages/
+
+# Ignore user-specific files
+*.user
+
+# Ignore build artifacts
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+*.bak
+*.swp
+
+# Ignore .NET Core files
+*.dotnet-*
+*.userprefs
+*.suo
+*.csproj.user
+*.pubxml
+*.publishproj
