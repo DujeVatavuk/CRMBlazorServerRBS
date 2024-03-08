@@ -45,5 +45,10 @@ namespace CRMBlazorServerRBS
             // Include the User
             items = items.Include(item => item.User);
         }
+
+        partial void OnTasksRead(ref IQueryable<Models.RadzenCRM.Task> items)
+        {
+            items = items.Include(item => item.Opportunity.User).Include(item => item.Opportunity.Contact);
+        }
     }
 }

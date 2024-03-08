@@ -86,18 +86,56 @@
         </RadzenCard>
     </RadzenColumn>
 </RadzenRow>
-
-
-@code {
-    Stats monthlyStats { get; set; }
-    IEnumerable<global::RevenueByCompany> revenueByCompany { get; set; }
-    IEnumerable<global::RevenueByMonth> revenueByMonth { get; set; }
-    IEnumerable<global::RevenueByEmployee> revenueByEmployee { get; set; }
-    protected override void OnInitialized()
-    {
-        monthlyStats = MonthlyStats();
-        revenueByCompany = RevenueByCompany();
-        revenueByMonth = RevenueByMonth();
-        revenueByEmployee = RevenueByEmployee();
-    }
-}
+<RadzenRow>
+    <RadzenColumn SizeXL="6">
+        <RadzenCard>
+            <RadzenHeading Text="Text"></RadzenHeading>
+            <RadzenDataGrid TItem="Models.RadzenCRM.Opportunity" Data="getOpportunitiesResult" AllowSorting="true">
+                <Columns>
+                    <RadzenDataGridColumn TItem="Models.RadzenCRM.Opportunity" Title="Contact"
+                        SortProperty="Contact.FirstName">
+                        <Template>
+                            <RadzenLabel Text="@context.Contact.FirstName" />
+                            <RadzenLabel Text="@context.Contact.LastName" />
+                        </Template>
+                    </RadzenDataGridColumn>
+                    <RadzenDataGridColumn TItem="Models.RadzenCRM.Opportunity" Title="Amount" Property="Amount">
+                        <Template>
+                            <RadzenLabel Text="@context.Amount.ToString("C")" />
+                        </Template>
+                    </RadzenDataGridColumn>
+                    <RadzenDataGridColumn TItem="Models.RadzenCRM.Opportunity" Title="Status"
+                        Property="OpportunityStatus.Name" />
+                    <RadzenDataGridColumn TItem="Models.RadzenCRM.Opportunity" Title="CloseDate" Property="CloseDate" />
+                </Columns>
+            </RadzenDataGrid>
+        </RadzenCard>
+    </RadzenColumn>
+    <RadzenColumn SizeXL="6">
+        <RadzenCard>
+            <RadzenHeading Text="Active Tasks"></RadzenHeading>
+            <RadzenDataGrid TItem="Models.RadzenCRM.Task" Data="@getTasksResult" AllowSorting="true">
+                <Columns>
+                    <RadzenDataGridColumn TItem="Models.RadzenCRM.Task" Title="Employee"
+                        SortProperty="Opportunity.User.FirstName">
+                        <Template>
+                            <RadzenImage Path="@context.Opportunity.User.Picture"
+                                style="width:30px;height:30px;border-radius:15px;" />
+                            <RadzenLabel Text="@context.Opportunity.User.FirstName" />
+                            <RadzenLabel Text="@context.Opportunity.User.LastName" />
+                        </Template>
+                    </RadzenDataGridColumn>
+                    <RadzenDataGridColumn TItem="Models.RadzenCRM.Task" Title="Title" Property="Title"
+                        SortProperty="Opportunity.Name">
+                        <Template>
+                            <RadzenLabel Text="@context.Opportunity.Name" style="display: block" />
+                            <RadzenLabel Text="@context.Opportunity.Contact.FirstName" />
+                            <RadzenLabel Text="@context.Opportunity.Contact.LastName" />
+                        </Template>
+                    </RadzenDataGridColumn>
+                    <RadzenDataGridColumn TItem="Models.RadzenCRM.Task" Title="DueDate" Property="DueDate" />
+                </Columns>
+            </RadzenDataGrid>
+        </RadzenCard>
+    </RadzenColumn>
+</RadzenRow>

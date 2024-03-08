@@ -39,6 +39,28 @@ namespace CRMBlazorServerRBS.Pages
         [Inject]
         public Data.RadzenCRMContext Context { get; set; }
 
+        [Inject]
+        public RadzenCRMService RadzenCRMService { get; set; }
+
+        protected override async Task OnInitializedAsync() 
+        {
+            monthlyStats = MonthlyStats();
+            revenueByCompany = RevenueByCompany();
+            revenueByMonth = RevenueByMonth();
+            revenueByEmployee = RevenueByEmployee();
+            getOpportunitiesResult = await RadzenCRMService.GetOpportunities(new Radzen.Query { OrderBy = "CloseDate desc", Expand = "Contact,OpportunityStatus" });
+            getTasksResult = await RadzenCRMService.GetTasks(new Radzen.Query { OrderBy = "DueDate desc" });
+        }
+
+        public Stats monthlyStats { get; set; }
+        IEnumerable<RevenueByCompany> revenueByCompany { get; set; }
+        IEnumerable<RevenueByMonth> revenueByMonth { get; set; }
+        IEnumerable<RevenueByEmployee> revenueByEmployee { get; set; }
+        IEnumerable<Models.RadzenCRM.Opportunity> getOpportunitiesResult { get; set; }
+        IQueryable<Models.RadzenCRM.Task> getTasksResult { get; set; }
+
+        protected System.Linq.IQueryable<CRMBlazorServerRBS.Models.RadzenCRM.Opportunity> opportunities;
+
         public Stats MonthlyStats()
         {
             double wonOpportunities = Context.Opportunities
