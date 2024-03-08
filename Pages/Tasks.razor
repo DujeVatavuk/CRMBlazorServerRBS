@@ -1,4 +1,5 @@
-@page "/tasks"
+@page "/tasks"
+
 @attribute [Authorize]
 
 <PageTitle>Tasks</PageTitle>
@@ -32,8 +33,20 @@
                 <RadzenDataGridColumn TItem="CRMBlazorServerRBS.Models.RadzenCRM.Task" Property="DueDate" Title="Due Date">
                 </RadzenDataGridColumn>
                 <RadzenDataGridColumn TItem="CRMBlazorServerRBS.Models.RadzenCRM.Task" Property="TaskType.Name" Title="Task Type">
+                    <Template>
+                        <RadzenLabel Text="@context.TaskType.Name" />
+                        <RadzenIcon Icon="settings_phone" Visible="@(context.TaskType.Name == "Call")" Style="vertical-align: middle" />
+                        <RadzenIcon Icon="video_call" Visible="@(context.TaskType.Name == "Online Meeting")" Style="vertical-align: middle" />
+                        <RadzenIcon Icon="email" Visible="@(context.TaskType.Name == "Email")" Style="vertical-align: middle" />
+                    </Template>
                 </RadzenDataGridColumn>
                 <RadzenDataGridColumn TItem="CRMBlazorServerRBS.Models.RadzenCRM.Task" Property="TaskStatus.Name" Title="Task Status">
+                    <Template>
+                        <RadzenLabel Text="@context.TaskStatus.Name" />
+                        <RadzenIcon Icon="check_circle" Visible="@(context.TaskStatus.Name == "Complete")" Style="vertical-align: middle" />
+                        <RadzenIcon Icon="cancel" Visible="@(context.TaskStatus.Name == "Not Started")" Style="vertical-align: middle" />
+                        <RadzenIcon Icon="autorenew " Visible="@(context.TaskStatus.Name == "In Progress")" Style="vertical-align: middle" />
+                    </Template>
                 </RadzenDataGridColumn>
                 <RadzenDataGridColumn TItem="CRMBlazorServerRBS.Models.RadzenCRM.Task" Filterable="false" Sortable="false" Width="70px" TextAlign="TextAlign.Center">
                     <Template Context="task">
@@ -44,9 +57,7 @@
                     </Template>
                 </RadzenDataGridColumn>
             </Columns>
-
         </RadzenDataGrid>
-
     </RadzenColumn>
   </RadzenRow>
 </RadzenStack>
