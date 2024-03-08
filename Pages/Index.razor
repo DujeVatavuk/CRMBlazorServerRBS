@@ -60,12 +60,44 @@
         </RadzenCard>
     </RadzenColumn>
 </RadzenRow>
+<RadzenRow>
+    <RadzenColumn SizeXL="4" SizeLG="6">
+        <RadzenCard Style="margin: 16px">
+            <RadzenHeading Text="Customer life time value"></RadzenHeading>
+            <RadzenChart Style="width: 100%">
+                <RadzenColumnSeries TItem="global::RevenueByCompany" Data="@revenueByCompany" ValueProperty="Revenue" CategoryProperty="Company"></RadzenColumnSeries>
+            </RadzenChart>
+        </RadzenCard>
+    </RadzenColumn>
+<RadzenColumn SizeXL="4" SizeLG="6">
+        <RadzenCard Style="margin: 16px">
+            <RadzenHeading Text="Revenue"></RadzenHeading>
+            <RadzenChart Style="width: 100%">
+                <RadzenColumnSeries TItem="global::RevenueByMonth" Data="@revenueByMonth" ValueProperty="Revenue" CategoryProperty="Month"></RadzenColumnSeries>
+            </RadzenChart>
+        </RadzenCard>
+    </RadzenColumn>
+<RadzenColumn SizeXL="4" SizeLG="6">
+        <RadzenCard Style="margin: 16px">
+            <RadzenHeading Text="Revenue by employee"></RadzenHeading>
+            <RadzenChart Style="width: 100%">
+                <RadzenColumnSeries TItem="global::RevenueByEmployee" Data="@revenueByEmployee" ValueProperty="Revenue" CategoryProperty="Employee"></RadzenColumnSeries>
+            </RadzenChart>
+        </RadzenCard>
+    </RadzenColumn>
+</RadzenRow>
 
 
 @code {
     Stats monthlyStats { get; set; }
+    IEnumerable<global::RevenueByCompany> revenueByCompany { get; set; }
+    IEnumerable<global::RevenueByMonth> revenueByMonth { get; set; }
+    IEnumerable<global::RevenueByEmployee> revenueByEmployee { get; set; }
     protected override void OnInitialized()
     {
         monthlyStats = MonthlyStats();
+        revenueByCompany = RevenueByCompany();
+        revenueByMonth = RevenueByMonth();
+        revenueByEmployee = RevenueByEmployee();
     }
 }
