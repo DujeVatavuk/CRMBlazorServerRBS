@@ -59,5 +59,11 @@ namespace CRMBlazorServerRBS.Pages
                 error = ex.Message;
             }
         }
+
+        protected async Task TemplateForm0Submit(dynamic args)
+        {
+            await Security.UpdateUser(@Security.User.Id, @user);
+            NotificationService.Notify();
+        }
     }
 }
