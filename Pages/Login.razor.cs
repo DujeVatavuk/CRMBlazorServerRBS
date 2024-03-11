@@ -53,5 +53,27 @@ namespace CRMBlazorServerRBS.Pages
 
             infoVisible = !string.IsNullOrEmpty(info);
         }
+
+        string theForm = "document.forms[0]";
+
+        protected async System.Threading.Tasks.Task SplitButton0Click(Radzen.Blazor.RadzenSplitButtonItem args)
+        {
+            if(args?.Text == "Sales Manager")
+            {
+                await SetLoginCredentials("salesmanager@demo.radzen.com", "SalesManager1@");
+            }
+            else if(args?.Text == "Sales Representative")
+            {
+                await SetLoginCredentials("salesrep@demo.radzen.com", "SalesRep1@");
+            }
+
+            await JSRuntime.InvokeVoidAsync("eval", $@"{theForm}.submit()");
+        }
+
+        protected async System.Threading.Tasks.Task SetLoginCredentials(string username, string password)
+        {
+            await JSRuntime.InvokeVoidAsync("eval", $@"{theForm}.Username.value = '{username}'");
+            await JSRuntime.InvokeVoidAsync("eval", $@"{theForm}.Password.value = '{password}'");
+        }
     }
 }

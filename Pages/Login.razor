@@ -9,8 +9,12 @@
             Method="post">
             <RadzenAlert Shade="Radzen.Shade.Lighter" Variant="Radzen.Variant.Flat" Size="Radzen.AlertSize.Small" AlertStyle="Radzen.AlertStyle.Danger" Visible="@errorVisible">@error</RadzenAlert>
             <RadzenAlert Shade="Radzen.Shade.Lighter" Variant="Radzen.Variant.Flat" Size="Radzen.AlertSize.Small" AlertStyle="Radzen.AlertStyle.Info" Visible="@infoVisible">@info</RadzenAlert>
-            <RadzenLogin AllowResetPassword="false" AllowRegister="false" FormFieldVariant="Variant.Filled"
+            <RadzenLogin AllowResetPassword="false" AllowRegister="false" FormFieldVariant="Variant.Filled" ShowLoginButton="false"
             />
+            <RadzenSplitButton Text="Login" ButtonStyle="Radzen.ButtonStyle.Primary" Style="float: right" Click="@SplitButton0Click">
+                <RadzenSplitButtonItem Text="Sales Manager"></RadzenSplitButtonItem>
+                <RadzenSplitButtonItem Text="Sales Representative"></RadzenSplitButtonItem>
+            </RadzenSplitButton>
         </RadzenTemplateForm>
     </RadzenColumn>
 </RadzenRow>
